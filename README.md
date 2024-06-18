@@ -4,11 +4,11 @@
 
 This project's goal is to show my knowledge in creating a full-stack app.
 For the purpose of this assignment I have decided to focus on the backend.
-The API is build from scratch with Node, Express and Swagger and can support Sql, NoSql or File storage through 3 disctinct clients.
+The API is build from scratch with Node, Express and Swagger and can support Sql, NoSql or File storage through 3 distinct clients.
 API can be tested and the documentation is available using Swagger.
 The Front-end app was modify to show how the API is being used and display some of the data.
 
-Feel free to send me question at vscheidecker@gmail.com.
+Feel free to send me questions at vscheidecker@gmail.com.
 
 Victor Scheidecker
 
