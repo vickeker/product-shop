@@ -26,8 +26,19 @@ Setup: `/back`
 1. Prerequisite: NPM, Node
 2. Configure your database type and change the StorageClient accordingly in `back\src\services\products-service.ts` 
  - Sql (sqlite3): Memory db, package already part of the dependencies
+ ```
+  private db = new SqlStorageClient<Omit<Product, "id"> & { id?: number }>('products');
+ ```
  - NoSql: install MongoDB, and configure connection in `back\src\clients\nosql-storage.ts`
+ ```
+  private db = new NoSqlStorageClient<Omit<Product, "id"> & { id?: number }>('products');
+ ```
+ 
  - File storage
+```
+private db = new FileStorageClient<Omit<Product, "id"> & { id?: number }>('./src/assets/products.json');
+ ```
+3. Initial data is seeded on build from `./src/assets/products.json`
 3. `npm install`
 4. `npm run dev`
 5. API available at http://localhost:3000
