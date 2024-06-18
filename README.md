@@ -1,22 +1,33 @@
 # Victor Scheidecker - Tech Lead / Fullstack Senior Engineer
 
-## Products Project
+## Alten Shop Project
+
+This project's goal is to show my knowledge in creating a full-stack app.
+For the purpose of this assignment I have decided to focus on the backend.
+The API is build from scratch with Node, Express and Swagger and can support Sql, NoSql or File storage through 3 disctinct clients.
+API can be tested and the documentation is available using Swagger.
+The Front-end app was modify to show how the API is being used and display some of the data.
+
+Feel free to send me question at vscheidecker@gmail.com.
+
+Victor Scheidecker
+
 ### Front-end
-Setup
+Setup: `/front`
 1. Prerequisite: NPM, Angular
 2. `npm install`
-3. Configure server url in `front\src\app\product\product.service.ts`. Default url is `http://localhost:3000`.
+3. Configure API url in `front\src\app\product\product.service.ts`. Default url is `http://localhost:3000`.
 3. `npm run build`
 4. `npm run start`
-5. App available at http://localhost:8000
+5. App available at http://localhost:4200
 
 ### Back-end
-Setup
+Setup: `/back`
 1. Prerequisite: NPM, Node
 2. Configure your database type and change the StorageClient accordingly in `back\src\services\products-service.ts` 
-- Sql (sqlite3): Memory db, package already part of the dependencies
-- NoSql: install MongoDB, and configure connection in `back\src\clients\nosql-storage.ts`
-- File storage
+ - Sql (sqlite3): Memory db, package already part of the dependencies
+ - NoSql: install MongoDB, and configure connection in `back\src\clients\nosql-storage.ts`
+ - File storage
 3. `npm install`
 4. `npm run dev`
 5. API available at http://localhost:3000
