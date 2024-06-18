@@ -1,7 +1,7 @@
-### Victor Scheidecker - Tech Lead / Fullstack Senior Engineer
+# Victor Scheidecker - Tech Lead / Fullstack Senior Engineer
 
 ## Products Project
-# Front-end
+### Front-end
 Setup
 1. Prerequisite: NPM, Angular
 2. `npm install`
@@ -10,7 +10,7 @@ Setup
 4. `npm run start`
 5. App available at http://localhost:8000
 
-# Back-end
+### Back-end
 Setup
 1. Prerequisite: NPM, Node
 2. Configure your database type and change the StorageClient accordingly in `back\src\services\products-service.ts` 
@@ -21,14 +21,14 @@ Setup
 4. `npm run dev`
 5. API available at http://localhost:3000
 
-# API documentation (Swagger)
+### API documentation (Swagger)
 1. `npm install`
 2. `npm run dev`
 3. doc available at http://localhost:3000/docs
 
 
-
-# Front-end
+## Instructions
+### Front-end
 
 Créer un module angular "product" avec 2 composants (basés sur primeng): 
  - **products-admin** : qui liste les produits et qui permet de les administrer (ajouter, supprimer, modifier).
@@ -59,7 +59,7 @@ Un système de pagination doit être mis en place pour pouvoir afficher les prod
 
 ![pagination](front/doc/pagination.png)
 
-# Back-end (optionnel)
+### Back-end (optionnel)
 
 Si vous avez le temps vous pouvez développer un back-end permettant la gestion de produits définis plus bas.
 Vous pouvez utiliser la technologie de votre choix parmis la liste suivante :
@@ -96,6 +96,6 @@ class Product {
 
 Le back-end créé doit pouvoir gérer les produits dans une base de données SQL/NoSQL ou dans un fichier json.
 
-## Bonus
+### Bonus
 
 Vous pouvez ajouter des tests Postman ou Swagger pour valider votre API
