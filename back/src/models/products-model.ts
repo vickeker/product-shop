@@ -10,3 +10,7 @@ export interface Product {
     image?: string;
     rating?: number;
 }
+
+export type ProductCreateParams = Pick<Product, "code" | "name" | "description" | "price" | "quantity" | "category" | "inventoryStatus" | "image" | "rating">;
+export type ProductReplaceParams = ProductCreateParams;
+export type ProductUpdateParams = Partial<ProductCreateParams>;

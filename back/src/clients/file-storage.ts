@@ -2,7 +2,7 @@ import fs from 'fs';
 
 type WithId<T> = Omit<T, 'id'> & { id: number };
 
-export class FileStorageService<T extends { id?: number }> {
+export class FileStorageClient<T extends { id?: number }> {
     private url: string;
     constructor(url: string) {
         this.url = url;

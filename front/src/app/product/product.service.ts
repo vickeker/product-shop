@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { IProduct } from './product.model';
+import { Product } from './product.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -14,12 +14,12 @@ export class ProductService {
   constructor() { }
 
 
-  getProducts(): Observable<{data: IProduct[]}> {
-    return this.http.get<{data: IProduct[]}>(this.apiUrl);
+  getProducts(): Observable<{data: Product[]}> {
+    return this.http.get<{data: Product[]}>(this.apiUrl);
   }
 
-  edit(id: string, product): Observable<{data: IProduct}> {
-    return this.http.patch<{data: IProduct}>(`${this.apiUrl}/${id}`, product);
+  edit(id: string, product): Observable<{data: Product}> {
+    return this.http.patch<{data: Product}>(`${this.apiUrl}/${id}`, product);
   }
 
   delete(id: string): Observable<void> {

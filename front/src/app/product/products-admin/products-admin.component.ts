@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { IProduct } from '../product.model';
+import { Product } from '../product.model';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ProductService } from '../product.service';
   providers: [ProductService]
 })
 export class ProductsAdminComponent implements OnInit {
-  products: IProduct[] = [];
+  products: Product[] = [];
   productService = inject(ProductService);
   constructor() {}
 
@@ -22,7 +22,7 @@ export class ProductsAdminComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-    this.productService.getProducts().subscribe((data: {data:IProduct[]}) => this.products = data.data);
+    this.productService.getProducts().subscribe((data: {data:Product[]}) => this.products = data.data);
   }
 
 }

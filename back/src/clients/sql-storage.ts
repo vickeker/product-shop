@@ -31,9 +31,10 @@ const createSqlDb = (table) => {
         return;
       });
 }
+
 type WithId<T> = Omit<T, 'id'> & { id: number };
 
-export class SqlStorageService<T extends { id?: number }> {
+export class SqlStorageClient<T extends { id?: number }> {
 
     private table: string;
 

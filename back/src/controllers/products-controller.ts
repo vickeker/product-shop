@@ -1,6 +1,7 @@
 import { Body, Controller, Delete, Get, Patch, Path, Post, Put, Route } from "tsoa";
 import { Product } from "../models/products-model";
-import { ProductCreateParams, ProductReplaceParams, ProductUpdateParams, ProductsService } from "../services/products-service";
+import { ProductsService } from "../services/products-service";
+import { ProductCreateParams, ProductReplaceParams, ProductUpdateParams } from "../models/products-model";
 
 interface ProductsResponse {
     data: Product[]

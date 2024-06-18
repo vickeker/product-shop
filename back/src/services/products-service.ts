@@ -1,13 +1,9 @@
-import { Product } from "../models/products-model";
-import { SqlStorageService } from "./sql-storage-service";
-
-export type ProductCreateParams = Pick<Product, "code" | "name" | "description" | "price" | "quantity" | "category" | "inventoryStatus" | "image" | "rating">;
-export type ProductReplaceParams = ProductCreateParams;
-export type ProductUpdateParams = Partial<ProductCreateParams>;
+import { Product, ProductCreateParams, ProductReplaceParams, ProductUpdateParams } from "../models/products-model";
+import { SqlStorageClient } from "../clients/sql-storage";
 
 export class ProductsService {
 
-  private db = new SqlStorageService<Omit<Product, "id"> & { id?: number }>('products');
+  private db = new SqlStorageClient<Omit<Product, "id"> & { id?: number }>('products');
 
   public async getProduct(id: number): Promise<Product> {
     return this.db.get(id);
