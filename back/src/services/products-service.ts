@@ -1,5 +1,6 @@
 import { Product, ProductCreateParams, ProductReplaceParams, ProductUpdateParams } from "../models/products-model";
 import { SqlStorageClient } from "../clients/sql-storage";
+import { NoSqlStorageClient } from "../clients/nosql-storage";
 
 export class ProductsService {
 

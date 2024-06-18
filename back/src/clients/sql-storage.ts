@@ -1,5 +1,6 @@
 import fs from 'fs';
 
+console.log('Using SQL client');
 const knex = require('knex')({
     client: 'sqlite3',
     connection: {
@@ -21,6 +22,8 @@ const createSqlDb = (table) => {
             t.string('inventoryStatus', 100);
             t.integer('rating');
           }).then(() => {
+            // seed initial data from file
+            console.log('Seeding...(upsert)');
             const data = fs.readFileSync('./src/assets/products.json', {encoding:'utf8'});
             const products = JSON.parse(data);  
             return knex(table).insert(products.data);

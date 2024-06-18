@@ -1,5 +1,7 @@
 import fs from 'fs';
 
+console.log('Using File Storage client');
+
 type WithId<T> = Omit<T, 'id'> & { id: number };
 
 export class FileStorageClient<T extends { id?: number }> {

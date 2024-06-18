@@ -1,10 +1,12 @@
 import mongoose, { Schema, Model } from 'mongoose';
 import { Product } from '../models/products-model';
+import fs from 'fs';
 
-mongoose.connect('mongodb://127.0.0.1:27017/products');
+console.log('Using NoSQL client');
+mongoose.connect('mongodb://127.0.0.1:27017/alten-shop');
 
 const ProductSchema = new Schema({
-    id: Number,
+    id: { type: Number, index: true, unique: true },
     code: String,
     name: String,
     description: String,
@@ -16,6 +18,14 @@ const ProductSchema = new Schema({
     rating: Number,
   });
 const Product = mongoose.model<Product>('Product', ProductSchema, 'products');
+const seed = () => {
+    console.log('Seeding...(upsert)');
+    const data = fs.readFileSync('./src/assets/products.json', {encoding:'utf8'});
+    const products = JSON.parse(data);
+    return Product.findOneAndUpdate({},products.data,{ upsert: true, new: true, setDefaultsOnInsert: true });
+}
+// seed initial data from file
+seed();
 
 const models = {
     'products': Product,

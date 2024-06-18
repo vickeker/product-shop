@@ -2,7 +2,7 @@
 
 ## Alten Shop Project
 
-This project's goal is to show my knowledge in creating a full-stack app.
+This project's goal is to show my knowledge in creating a full-stack app with Angular/Node/Typescript.
 For the purpose of this assignment I have decided to focus on the backend.
 The API is build from scratch with Node, Express and Swagger and can support Sql, NoSql or File storage through 3 distinct clients.
 API can be tested and the documentation is available using Swagger.
