@@ -1,6 +1,6 @@
 # Victor Scheidecker - Tech Lead / Fullstack Senior Engineer
 
-## Alten Shop Project
+## Product Shop Project
 
 This project's goal is to show my knowledge in creating a full-stack app with Angular/Node/Typescript.
 For the purpose of this assignment I have decided to focus on the backend.
@@ -37,7 +37,7 @@ Setup: `/back`
 ```
 ```
    # back\src\clients\nosql-storage.ts
-   mongoose.connect('mongodb://127.0.0.1:27017/alten-shop');
+   mongoose.connect('mongodb://127.0.0.1:27017/shop');
  ```
  - File storage
 ```
