@@ -3,7 +3,7 @@ import { Product } from '../models/products-model';
 import fs from 'fs';
 
 console.log('Using NoSQL client');
-mongoose.connect('mongodb://127.0.0.1:27017/alten-shop');
+mongoose.connect('mongodb://127.0.0.1:27017/shop');
 
 const ProductSchema = new Schema({
     id: { type: Number, index: true, unique: true },
